@@ -21,7 +21,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],//quitamos el # del url 
+  imports: [RouterModule.forRoot(routes, {useHash: false})],//quitamos el # del url 
 
  exports: [RouterModule]
 })

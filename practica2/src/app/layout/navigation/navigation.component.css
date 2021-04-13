@@ -11,3 +11,7 @@
 .a-letter-title{
     color: aliceblue;
 }
+
+.a-buttons-action{
+    display: flex;
+}
