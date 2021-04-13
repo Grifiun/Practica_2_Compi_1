@@ -1,0 +1,13 @@
+.a-area-texto{       
+    background: rgba(252, 250, 250, 0.8);
+}
+.a-numeros{
+    float: left;
+}
+.a-salida{
+    float: right;
+}
+
+.a-bloque-general{
+    display: -ms-inline-flexbox;
+}
