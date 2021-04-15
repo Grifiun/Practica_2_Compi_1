@@ -10,7 +10,8 @@ import { HostListener } from '@angular/core';
 export class EntradaTextoComponent implements OnInit {
   contador: string = '';
   contador2: string = '';
-
+  colNum1;
+  colNum2;
   scrollNum: any;
   scrollNum2: any;
   constructor() {
@@ -27,6 +28,14 @@ export class EntradaTextoComponent implements OnInit {
     //contamos las lineas
     var lines = texto.split(/\r|\r\n|\n/);
     var count = lines.length;
+
+    if(count > 0 && count < 100){
+      this.colNum1 = 1;
+    }else if(count >= 100 && count < 1000){
+      this.colNum1 = 2;
+    }else{
+      this.colNum1 = 3;
+    }
 
     //agregamos el valor
     for(var i = 1; i <= count; i++){
@@ -58,6 +67,14 @@ export class EntradaTextoComponent implements OnInit {
     //contamos las lineas
     var lines = texto.split(/\r|\r\n|\n/);
     var count = lines.length;
+
+    if(count > 0 && count < 100){
+      this.colNum2 = 1;
+    }else if(count >= 100 && count < 1000){
+      this.colNum2 = 2;
+    }else{
+      this.colNum2 = 3;
+    }
 
     //agregamos el valor
     for(var i = 1; i <= count; i++){
