@@ -11,14 +11,21 @@
     border-right: 0;
     border-color: auto;
     /*background: rgba(54, 86, 92, 0.8);*/
-    background: rgba(0, 0, 0, 0.8);
+    /*background: rgba(0, 0, 0, 0.8);*/
+    background: rgba(92, 90, 90, 0.8);
     color: aliceblue;
+    overflow: hidden;
 }
 
 .a-salida{
+    /*
     float: right;
     width: 50%;
-    padding-left: 30px;
+    padding-left: 30px;*/
+
+    padding-left: 0;
+    padding-right: 0.2rem;
+    border-right: 20px;    
 }
 
 .a-entrada{
@@ -66,6 +73,7 @@ button:hover{
     transform: scale(1.05,1.05);
     transition: scale(1.05,1.05) .2s ease-in-out;
 }
+
 
 
 /*

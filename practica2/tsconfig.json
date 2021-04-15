@@ -6,6 +6,7 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "noImplicitAny": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -27,7 +28,8 @@
       "@env/*":["enviroments"],
       "@modules/*":["app/modules/*"],
       "@data/*":["app/data/*"],
-      "@layout/*":["app/layout/*"]
+      "@layout/":["app/layout/"],
+      "@assets/*":["app/assets/*"]
 
     }
   },
