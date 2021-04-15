@@ -7,7 +7,7 @@ const routes: Routes = [
  {
   path: '',
   component: SkeletonComponent,   
-  children: [
+  children: [ 
     {
       path: '',
       loadChildren: () =>
