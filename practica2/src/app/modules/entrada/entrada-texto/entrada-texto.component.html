@@ -1,17 +1,43 @@
-<p>Programe!</p>
-
-<div  >
-    <div class="row a-bloque-general">
-      <div class="col-sm">
-        <textarea class="a-area-texto a-numeros" cols="1" rows="50">{{contador ? contador : '1'}}</textarea>
-        <div class="col-sm a-entrada">
-          <textarea class="a-area-texto" (input)="cambioTexto(this.texto.value)" placeholder="Entrada" cols="90" rows="50" #texto></textarea>
-        </div>
+<div class="a-bloque-boton-analizar">
+  <button class="a-boton-analizar" (click)="analizar(texto.value)">ANALIZAR</button>
+</div>
+<div >
+  <div class="row a-bloque-general">
+    <div class="col-sm a-bloque-general-entrada">
+      <textarea class="a-area-texto a-numeros" (scroll)="onScrollNum($event, scrollPositionNum.scrollTop)"  readonly [scrollTop]="scrollNum ? scrollNum : 0" cols="{{colNum1 ? colNum1 : 1}}" rows="20" #scrollPositionNum>{{contador ? contador : '1'}}</textarea>
+      <div  class="col-sm a-entrada">
+        <textarea class="a-area-texto a-area-texto-usables"  (scroll)="onScrollEnt($event, texto.scrollTop)" [scrollTop]="scrollNum ? scrollNum : 0" (input)="cambioTexto(this.texto.value)" placeholder="Entrada" rows="20" #texto></textarea>
       </div>
-      
-      <div class="col-sm a-salida">
-        <textarea class="a-area-texto" cols="90" rows="50">Salida</textarea>
+    </div>    
+    <div class="col-sm a-bloque-general-entrada">
+      <textarea class="a-area-texto a-numeros" (scroll)="onScrollNum2($event, scrollPositionNum2.scrollTop)"  readonly [scrollTop]="scrollNum2 ? scrollNum2 : 0" cols="{{colNum2 ? colNum2 : 1}}" rows="20" #scrollPositionNum2>{{contador2 ? contador2 : '1'}}</textarea>      
+      <div class="col-sm a-salida">      
+        <textarea class="a-area-texto a-area-texto-usables" (scroll)="onScrollEnt2($event, texto2.scrollTop)" [scrollTop]="scrollNum2 ? scrollNum2 : 0" (input)="cambioTexto2(this.texto2.value)" placeholder="Salida" rows="20" #texto2></textarea>
       </div>
     </div>
   </div>
+</div>
+
+  <!-- 
+
+ [scrollTop]="texto.scrollHeight"
+
+  <div class="container-fluid">
+    <div class="a-bloque-general container-fluid">
+      <div class="a-bloque-general-entrada">
+        <div class="">
+          <textarea class="a-area-texto a-numeros" cols="1" rows="50">{{contador ? contador : '1'}}</textarea>
+          
+        </div>   
+        <div class="a-entrada">
+          <textarea class="a-area-texto" (input)="cambioTexto(this.texto.value)" placeholder="Entrada" cols="90" rows="50" #texto></textarea>
+        </div>  
+      </div> 
+      <div class="a-salida container-fluid">
+        <textarea class="a-area-texto" cols="90" rows="50">Salida</textarea>
+      </div>
+    </div>
+</div>
   
+
+  -->
