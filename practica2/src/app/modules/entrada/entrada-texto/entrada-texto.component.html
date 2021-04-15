@@ -1,0 +1,17 @@
+<p>Programe!</p>
+
+<div  >
+    <div class="row a-bloque-general">
+      <div class="col-sm">
+        <textarea class="a-area-texto a-numeros" cols="1" rows="50">{{contador ? contador : '1'}}</textarea>
+        <div class="col-sm a-entrada">
+          <textarea class="a-area-texto" (input)="cambioTexto(this.texto.value)" placeholder="Entrada" cols="90" rows="50" #texto></textarea>
+        </div>
+      </div>
+      
+      <div class="col-sm a-salida">
+        <textarea class="a-area-texto" cols="90" rows="50">Salida</textarea>
+      </div>
+    </div>
+  </div>
+  
