@@ -1,17 +1,24 @@
 .a-area-texto{       
-    background: rgba(186, 200, 202, 0.8)
+    /*background: rgba(186, 200, 202, 0.8);*/
+    /*background: rgba(131, 131, 131, 0.8);*/
+    background: rgba(122, 119, 119, 0.15);
 }
 
 .a-numeros{
     padding-left: 0.5rem;
     padding-right: 0;
-    float: left;
-    background: rgba(54, 86, 92, 0.8);
+    float: auto;
+    border-right: 0;
+    border-color: auto;
+    /*background: rgba(54, 86, 92, 0.8);*/
+    background: rgba(0, 0, 0, 0.8);
     color: aliceblue;
 }
 
 .a-salida{
     float: right;
+    width: 50%;
+    padding-left: 30px;
 }
 
 .a-entrada{
@@ -21,6 +28,56 @@
 }
 
 .a-bloque-general{
-    display: -ms-inline-flexbox;
-    text-align: center;
+    display: inline-flex;
+    width: 97vw;
+    
 }
+.a-bloque-general-entrada{
+    display: inline-flex;
+    width: 50%;
+    padding-left: 30px;
+    
+}
+
+.a-area-texto-usables{
+    width: 100%;
+}
+
+.a-boton-analizar{
+    background-color:  rgba(29, 30, 31, 0.8);
+    border: none;
+    color: aliceblue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.a-bloque-boton-analizar{
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 15px;
+}
+
+button:hover{
+    /*background-color: yellow;*/
+    transform: scale(1.05,1.05);
+    transition: scale(1.05,1.05) .2s ease-in-out;
+}
+
+
+/*
+.a-bloque-general-entrada{
+    display: inline-flex;
+    padding-left: 25px;
+    
+}
+
+.a-salida{
+    float: right;
+    padding-left: 30px;
+}
+
+*/

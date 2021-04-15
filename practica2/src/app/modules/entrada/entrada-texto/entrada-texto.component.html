@@ -1,17 +1,38 @@
-<p>Programe!</p>
-
-<div  >
-    <div class="row a-bloque-general">
-      <div class="col-sm">
-        <textarea class="a-area-texto a-numeros" cols="1" rows="50">{{contador ? contador : '1'}}</textarea>
-        <div class="col-sm a-entrada">
-          <textarea class="a-area-texto" (input)="cambioTexto(this.texto.value)" placeholder="Entrada" cols="90" rows="50" #texto></textarea>
-        </div>
+<div class="a-bloque-boton-analizar">
+  <button class="a-boton-analizar">ANALIZAR</button>
+</div>
+<div>
+  <div class="row a-bloque-general">
+    <div class="col-sm a-bloque-general-entrada">
+      <textarea class="a-area-texto a-numeros" cols="1" rows="50">{{contador ? contador : '1'}}</textarea>
+      <div class="col-sm a-entrada">
+        <textarea class="a-area-texto a-area-texto-usables" (input)="cambioTexto(this.texto.value)" placeholder="Entrada" rows="50" #texto></textarea>
       </div>
-      
-      <div class="col-sm a-salida">
+    </div>    
+    <div class="col-sm a-salida">
+      <textarea class="a-area-texto a-area-texto-usables" placeholder="Salida" rows="50"></textarea>
+    </div>
+  </div>
+</div>
+
+  <!-- 
+
+  <div class="container-fluid">
+    <div class="a-bloque-general container-fluid">
+      <div class="a-bloque-general-entrada">
+        <div class="">
+          <textarea class="a-area-texto a-numeros" cols="1" rows="50">{{contador ? contador : '1'}}</textarea>
+          
+        </div>   
+        <div class="a-entrada">
+          <textarea class="a-area-texto" (input)="cambioTexto(this.texto.value)" placeholder="Entrada" cols="90" rows="50" #texto></textarea>
+        </div>  
+      </div> 
+      <div class="a-salida container-fluid">
         <textarea class="a-area-texto" cols="90" rows="50">Salida</textarea>
       </div>
     </div>
-  </div>
+</div>
   
+
+  -->

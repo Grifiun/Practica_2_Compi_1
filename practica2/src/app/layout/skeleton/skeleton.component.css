@@ -1,4 +1,5 @@
 .a-skeleton-content{
     min-height: calc(100vh - 80px - 60px);
-    background: rgba(85, 85, 85, 0.15);
+    /*background: rgba(85, 85, 85, 0.15);*/
+    background: rgba(122, 119, 119, 0.15);
 }
