@@ -14,6 +14,7 @@ export class EntradaTextoComponent implements OnInit {
   colNum2;
   scrollNum: any;
   scrollNum2: any;
+  analisisEntrada;
   constructor() {
 
   }
@@ -27,7 +28,7 @@ export class EntradaTextoComponent implements OnInit {
     //alert(texto);
     //contamos las lineas
     var lines = texto.split(/\r|\r\n|\n/);
-    var count = lines.length;
+    var count = lines.length;   
 
     if(count > 0 && count < 100){
       this.colNum1 = 1;
@@ -42,12 +43,7 @@ export class EntradaTextoComponent implements OnInit {
       this.contador += ''+i+'\n';
     }
     //alert(this.contador);
-  }
-  analizar(texto: string){
-    alert("texto a analizar:\n"+texto);
-    GramaticaParser.parse(texto);
-    //alert(this.contador);
-  }
+  }  
 
   @HostListener('scroll', ['$event'])
   onScrollNum($event, scrollT) {
@@ -91,6 +87,32 @@ export class EntradaTextoComponent implements OnInit {
   @HostListener('scroll', ['$event'])
   onScrollEnt2($event, scrollT) {
     this.scrollNum2 = scrollT;
+  }
+
+  //TEXTO DEL PARSER
+  analizar(texto: string){
+    var analisisEntrada = '';
+    var gram = GramaticaParser;
+    //alert("texto a analizar:\n"+texto);
+    GramaticaParser.parse(texto);
+    var listaErroresParser = gram.listaErroresParser;    
+
+    //if(listaErroresParser != null && listaErroresParser.lenght > 0){
+
+    try {        
+      for(var i = 0; i < listaErroresParser.length; i++){
+        analisisEntrada += listaErroresParser[i]; 
+      }
+    } catch (error) {
+      analisisEntrada = '';
+    }
+
+    this.analisisEntrada = analisisEntrada
+
+    //gram = null;
+    GramaticaParser.listaErroresParser.splice(0, listaErroresParser.length);
+    GramaticaParser.listaErroresParser.length = 0;
+    //GramaticaParser.listaErroresParser = null;   
   }
 
 }

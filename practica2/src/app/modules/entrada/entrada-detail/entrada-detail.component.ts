@@ -6,10 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./entrada-detail.component.css']
 })
 export class EntradaDetailComponent implements OnInit {
-  public title = {
-    text: 'DETALLES',
-    type: 'primary'
-  };
   constructor() { }
 
   ngOnInit(): void {
