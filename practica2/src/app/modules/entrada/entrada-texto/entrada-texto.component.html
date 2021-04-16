@@ -12,7 +12,7 @@
     <div class="col-sm a-bloque-general-entrada">
       <textarea class="a-area-texto a-numeros" (scroll)="onScrollNum2($event, scrollPositionNum2.scrollTop)"  readonly [scrollTop]="scrollNum2 ? scrollNum2 : 0" cols="{{colNum2 ? colNum2 : 1}}" rows="20" #scrollPositionNum2>{{contador2 ? contador2 : '1'}}</textarea>      
       <div class="col-sm a-salida">      
-        <textarea class="a-area-texto a-area-texto-usables" (scroll)="onScrollEnt2($event, texto2.scrollTop)" [scrollTop]="scrollNum2 ? scrollNum2 : 0" (input)="cambioTexto2(this.texto2.value)" placeholder="Salida" rows="20" #texto2></textarea>
+        <textarea class="a-area-texto a-area-texto-usables" (scroll)="onScrollEnt2($event, texto2.scrollTop)" [scrollTop]="scrollNum2 ? scrollNum2 : 0" (input)="cambioTexto2(this.texto2.value)" placeholder="Salida" rows="20" #texto2>{{analisisEntrada ? analisisEntrada : ''}}</textarea>
       </div>
     </div>
   </div>
